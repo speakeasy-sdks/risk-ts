@@ -1,5 +1,5 @@
 # Application
-(*application*)
+(*.application*)
 
 ## Overview
 
@@ -23,7 +23,7 @@ Create an application from a JSON request body.
 
 ```typescript
 import { RiskCloudAPI } from "Risk-Cloud-API";
-import { ApplicationApiCreateInIcon, ApplicationApiCreateInType } from "Risk-Cloud-API/dist/sdk/models/shared";
+import { Icon, TypeT } from "Risk-Cloud-API/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new RiskCloudAPI({
@@ -38,9 +38,9 @@ import { ApplicationApiCreateInIcon, ApplicationApiCreateInType } from "Risk-Clo
   const res = await sdk.application.create({
     applicationApiCreateIn: {
       color: "#00a3de",
-      icon: ApplicationApiCreateInIcon.Cubes,
+      icon: Icon.Cubes,
       name: "Cyber Risk Management Application",
-      type: ApplicationApiCreateInType.ControlsCompliance,
+      type: TypeT.ControlsCompliance,
     },
   });
 

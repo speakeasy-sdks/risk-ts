@@ -1,5 +1,5 @@
 # WorkflowMap
-(*workflowMap*)
+(*.workflowMap*)
 
 ## Overview
 
@@ -23,7 +23,7 @@ Create a workflow map from a JSON request body.
 
 ```typescript
 import { RiskCloudAPI } from "Risk-Cloud-API";
-import { WorkflowMapApiCreateInRelationship } from "Risk-Cloud-API/dist/sdk/models/shared";
+import { Relationship } from "Risk-Cloud-API/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new RiskCloudAPI({
@@ -38,7 +38,7 @@ import { WorkflowMapApiCreateInRelationship } from "Risk-Cloud-API/dist/sdk/mode
   const res = await sdk.workflowMap.create({
     workflowMapApiCreateIn: {
       from: "a1b2c3d4",
-      relationship: WorkflowMapApiCreateInRelationship.OneToMany,
+      relationship: Relationship.OneToMany,
       to: "a1b2c3d4",
     },
   });

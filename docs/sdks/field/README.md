@@ -1,5 +1,5 @@
 # Field
-(*field*)
+(*.field*)
 
 ## Overview
 
@@ -19,7 +19,7 @@ Retrieve a page of all fields whose parent application the current user has [Bui
 
 ```typescript
 import { RiskCloudAPI } from "Risk-Cloud-API";
-import { ReadAllFieldsFieldTypeFieldTypeFilter } from "Risk-Cloud-API/dist/sdk/models/operations";
+import { FieldTypeFilter } from "Risk-Cloud-API/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new RiskCloudAPI({

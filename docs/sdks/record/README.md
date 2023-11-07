@@ -1,5 +1,5 @@
 # RecordT
-(*record*)
+(*.record*)
 
 ## Overview
 

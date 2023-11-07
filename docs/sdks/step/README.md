@@ -1,5 +1,5 @@
 # Step
-(*step*)
+(*.step*)
 
 ## Overview
 
@@ -23,7 +23,7 @@ Create a step from a JSON request body.
 
 ```typescript
 import { RiskCloudAPI } from "Risk-Cloud-API";
-import { StepApiCreateInAssignableUserType } from "Risk-Cloud-API/dist/sdk/models/shared";
+import { AssignableUserType } from "Risk-Cloud-API/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new RiskCloudAPI({
@@ -37,7 +37,7 @@ import { StepApiCreateInAssignableUserType } from "Risk-Cloud-API/dist/sdk/model
 
   const res = await sdk.step.create({
     stepApiCreateIn: {
-      assignableUserType: StepApiCreateInAssignableUserType.AppUsers,
+      assignableUserType: AssignableUserType.AppUsers,
       enableComments: false,
       externalUserMfaRequired: false,
       name: "Identify Risk",

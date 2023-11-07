@@ -1,5 +1,5 @@
 # Workflow
-(*workflow*)
+(*.workflow*)
 
 ## Overview
 
