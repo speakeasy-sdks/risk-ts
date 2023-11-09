@@ -2,21 +2,21 @@ configVersion: 1.0.0
 management:
   docChecksum: 5fa7e0c88f526d37d5ff49917d1c5693
   docVersion: v2023.10.0
-  speakeasyVersion: 1.114.1
-  generationVersion: 2.181.1
+  speakeasyVersion: 1.116.0
+  generationVersion: 2.185.0
 generation:
   comments: {}
   sdkClassName: Risk-Cloud-API
   repoURL: https://github.com/speakeasy-sdks/risk-ts.git
 features:
   typescript:
-    core: 3.1.0
+    core: 3.1.2
     globalSecurity: 2.82.0
     globalServerURLs: 2.82.0
     methodSecurity: 2.82.0
     nameOverrides: 2.81.1
 typescript:
-  version: 0.2.0
+  version: 0.2.1
   author: speakeasy-bar
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
@@ -28,7 +28,9 @@ typescript:
       operations: sdk/models/operations
       shared: sdk/models/shared
       webhooks: sdk/models/webhooks
+  inputModelSuffix: input
   installationURL: https://github.com/speakeasy-sdks/risk-ts
   maxMethodParams: 0
+  outputModelSuffix: output
   packageName: Risk-Cloud-API
   repoSubDirectory: .

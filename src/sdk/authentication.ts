@@ -41,7 +41,7 @@ export class Authentication {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/api/v1/account/token";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/api/v1/account/token";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetApiTokenSecurity(security);
@@ -58,7 +58,7 @@ export class Authentication {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",

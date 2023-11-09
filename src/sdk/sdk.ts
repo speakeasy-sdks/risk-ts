@@ -55,9 +55,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "v2023.10.0";
-    sdkVersion = "0.2.0";
-    genVersion = "2.181.1";
-    userAgent = "speakeasy-sdk/typescript 0.2.0 2.181.1 v2023.10.0 Risk-Cloud-API";
+    sdkVersion = "0.2.1";
+    genVersion = "2.185.0";
+    userAgent = "speakeasy-sdk/typescript 0.2.1 2.185.0 v2023.10.0 Risk-Cloud-API";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -116,7 +116,7 @@ export class RiskCloudAPI {
             serverURL = ServerList[serverIdx];
         }
 
-        const defaultClient = props?.defaultClient ?? axios.create({ baseURL: serverURL });
+        const defaultClient = props?.defaultClient ?? axios.create();
         this.sdkConfiguration = new SDKConfiguration({
             defaultClient: defaultClient,
             security: props?.security,
