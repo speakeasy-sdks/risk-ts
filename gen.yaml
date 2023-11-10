@@ -2,21 +2,23 @@ configVersion: 1.0.0
 management:
   docChecksum: 5fa7e0c88f526d37d5ff49917d1c5693
   docVersion: v2023.10.0
-  speakeasyVersion: 1.116.0
-  generationVersion: 2.185.0
+  speakeasyVersion: 1.118.3
+  generationVersion: 2.187.7
 generation:
   comments: {}
   sdkClassName: Risk-Cloud-API
   repoURL: https://github.com/speakeasy-sdks/risk-ts.git
+  usageSnippets:
+    optionalPropertyRendering: withExample
 features:
   typescript:
-    core: 3.1.2
+    core: 3.1.3
     globalSecurity: 2.82.0
     globalServerURLs: 2.82.0
     methodSecurity: 2.82.0
     nameOverrides: 2.81.1
 typescript:
-  version: 0.2.1
+  version: 0.2.2
   author: speakeasy-bar
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true

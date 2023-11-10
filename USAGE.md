@@ -1,6 +1,4 @@
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { RiskCloudAPI } from "Risk-Cloud-API";
 import { GetApiTokenSecurity } from "Risk-Cloud-API/dist/sdk/models/operations";
