@@ -25,12 +25,12 @@ Create a workflow map from a JSON request body.
 import { RiskCloudAPI } from "Risk-Cloud-API";
 import { Relationship } from "Risk-Cloud-API/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new RiskCloudAPI({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -46,7 +46,9 @@ import { Relationship } from "Risk-Cloud-API/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -77,12 +79,12 @@ Delete a workflow map specified by the ID in the URL path.
 ```typescript
 import { RiskCloudAPI } from "Risk-Cloud-API";
 
-(async() => {
+async function run() {
   const sdk = new RiskCloudAPI({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -94,7 +96,9 @@ import { RiskCloudAPI } from "Risk-Cloud-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -125,12 +129,12 @@ Retrieve a workflow map specified by the ID in the URL path.
 ```typescript
 import { RiskCloudAPI } from "Risk-Cloud-API";
 
-(async() => {
+async function run() {
   const sdk = new RiskCloudAPI({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -142,7 +146,9 @@ import { RiskCloudAPI } from "Risk-Cloud-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -173,12 +179,12 @@ Retrieve a page of all workflow maps that the current user has [Build Access to 
 ```typescript
 import { RiskCloudAPI } from "Risk-Cloud-API";
 
-(async() => {
+async function run() {
   const sdk = new RiskCloudAPI({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -188,7 +194,9 @@ import { RiskCloudAPI } from "Risk-Cloud-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -220,12 +228,12 @@ Update a workflow map specified by the ID in the URL path from a JSON request bo
 import { RiskCloudAPI } from "Risk-Cloud-API";
 import { WorkflowMapApiUpdateInRelationship } from "Risk-Cloud-API/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new RiskCloudAPI({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -240,7 +248,9 @@ import { WorkflowMapApiUpdateInRelationship } from "Risk-Cloud-API/dist/sdk/mode
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

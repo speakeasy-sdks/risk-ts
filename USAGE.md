@@ -1,13 +1,13 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { RiskCloudAPI } from "Risk-Cloud-API";
 import { GetApiTokenSecurity } from "Risk-Cloud-API/dist/sdk/models/operations";
 
-(async () => {
+async function run() {
     const sdk = new RiskCloudAPI();
     const operationSecurity: GetApiTokenSecurity = {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
     };
 
     const res = await sdk.authentication.getApiToken({}, operationSecurity);
@@ -15,7 +15,9 @@ import { GetApiTokenSecurity } from "Risk-Cloud-API/dist/sdk/models/operations";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

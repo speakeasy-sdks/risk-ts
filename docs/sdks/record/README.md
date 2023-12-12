@@ -20,12 +20,12 @@ Retrieve a page of all records that the current user has [Read or Write access](
 ```typescript
 import { RiskCloudAPI } from "Risk-Cloud-API";
 
-(async() => {
+async function run() {
   const sdk = new RiskCloudAPI({
     security: {
       basic: {
-        password: "",
-        username: "",
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
       },
     },
   });
@@ -35,7 +35,9 @@ import { RiskCloudAPI } from "Risk-Cloud-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
