@@ -90,7 +90,7 @@ async function run() {
   });
 
   const res = await sdk.workflowMap.delete({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -140,7 +140,7 @@ async function run() {
   });
 
   const res = await sdk.workflowMap.read({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -242,7 +242,7 @@ async function run() {
     workflowMapApiUpdateIn: {
       relationship: WorkflowMapApiUpdateInRelationship.ManyToMany,
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {

@@ -4,15 +4,15 @@ management:
   docChecksum: 5fa7e0c88f526d37d5ff49917d1c5693
   docVersion: v2023.10.0
   speakeasyVersion: internal
-  generationVersion: 2.225.2
-  releaseVersion: 0.3.1
-  configChecksum: 13c31cc245e63efb32d61fe1d8280e39
+  generationVersion: 2.258.2
+  releaseVersion: 0.3.2
+  configChecksum: 847dfbd42730f9cfb3a0b3079aac8168
   repoURL: https://github.com/speakeasy-sdks/risk-ts.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/risk-ts
 features:
   typescript:
-    core: 3.4.1
+    core: 3.4.7
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
     methodSecurity: 2.82.0

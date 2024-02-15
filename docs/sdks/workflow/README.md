@@ -91,7 +91,7 @@ async function run() {
   });
 
   const res = await sdk.workflow.delete({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -141,7 +141,7 @@ async function run() {
   });
 
   const res = await sdk.workflow.read({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -245,7 +245,7 @@ async function run() {
       xpos: 20,
       ypos: 20,
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {

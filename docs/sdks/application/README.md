@@ -91,7 +91,7 @@ async function run() {
   });
 
   const res = await sdk.application.delete({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -141,7 +141,7 @@ async function run() {
   });
 
   const res = await sdk.application.read({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -248,7 +248,7 @@ async function run() {
       restrictBuildAccess: false,
       type: ApplicationApiUpdateInType.ControlsCompliance,
     },
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
