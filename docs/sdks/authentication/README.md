@@ -19,16 +19,18 @@ Generates a new, expiring access token from the provided Client and Secret keys.
 
 ```typescript
 import { RiskCloudAPI } from "Risk-Cloud-API";
-import { GetApiTokenSecurity } from "Risk-Cloud-API/dist/sdk/models/operations";
 
 async function run() {
-  const sdk = new RiskCloudAPI();
-const operationSecurity: GetApiTokenSecurity = {
-  password: "<YOUR_PASSWORD_HERE>",
-  username: "<YOUR_USERNAME_HERE>",
-};
+  const sdk = new RiskCloudAPI({
+    security: {
+      basic: {
+        password: "<YOUR_PASSWORD_HERE>",
+        username: "<YOUR_USERNAME_HERE>",
+      },
+    },
+  });
 
-  const res = await sdk.authentication.getApiToken({}, operationSecurity);
+  const res = await sdk.authentication.getApiToken({});
 
   if (res.statusCode == 200) {
     // handle response
@@ -40,11 +42,10 @@ run();
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.GetApiTokenRequest](../../sdk/models/operations/getapitokenrequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `security`                                                                           | [operations.GetApiTokenSecurity](../../sdk/models/operations/getapitokensecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
-| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.GetApiTokenRequest](../../sdk/models/operations/getapitokenrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response

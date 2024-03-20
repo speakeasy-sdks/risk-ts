@@ -3,19 +3,18 @@ id: 669946d0-c345-47d0-a8fa-ebacc88e99bc
 management:
   docChecksum: 5fa7e0c88f526d37d5ff49917d1c5693
   docVersion: v2023.10.0
-  speakeasyVersion: 1.207.1
-  generationVersion: 2.280.6
-  releaseVersion: 0.3.3
-  configChecksum: 64df3bc6df598fdae20aea7f714612fa
+  speakeasyVersion: 1.213.0
+  generationVersion: 2.283.1
+  releaseVersion: 0.4.0
+  configChecksum: 94e32e59f37a1b096b1d666fb62ce1b6
   repoURL: https://github.com/speakeasy-sdks/risk-ts.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/risk-ts
 features:
   typescript:
     core: 3.4.8
-    globalSecurity: 2.82.4
+    globalSecurity: 2.82.5
     globalServerURLs: 2.82.2
-    methodSecurity: 2.82.0
     nameOverrides: 2.81.1
 generatedFiles:
   - src/sdk/authentication.ts
@@ -104,7 +103,6 @@ generatedFiles:
   - src/sdk/models/errors/index.ts
   - src/sdk/models/operations/index.ts
   - src/sdk/models/shared/index.ts
-  - docs/sdk/models/operations/getapitokensecurity.md
   - docs/sdk/models/operations/getapitokenrequest.md
   - docs/sdk/models/operations/getapitokenresponse.md
   - docs/sdk/models/operations/createapplicationrequest.md

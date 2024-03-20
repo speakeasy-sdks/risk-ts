@@ -37,16 +37,18 @@ yarn add https://github.com/speakeasy-sdks/risk-ts
 
 ```typescript
 import { RiskCloudAPI } from "Risk-Cloud-API";
-import { GetApiTokenSecurity } from "Risk-Cloud-API/dist/sdk/models/operations";
 
 async function run() {
-    const sdk = new RiskCloudAPI();
-    const operationSecurity: GetApiTokenSecurity = {
-        password: "<YOUR_PASSWORD_HERE>",
-        username: "<YOUR_USERNAME_HERE>",
-    };
+    const sdk = new RiskCloudAPI({
+        security: {
+            basic: {
+                password: "<YOUR_PASSWORD_HERE>",
+                username: "<YOUR_USERNAME_HERE>",
+            },
+        },
+    });
 
-    const res = await sdk.authentication.getApiToken({}, operationSecurity);
+    const res = await sdk.authentication.getApiToken({});
 
     if (res.statusCode == 200) {
         // handle response
@@ -119,18 +121,20 @@ Example
 
 ```typescript
 import { RiskCloudAPI } from "Risk-Cloud-API";
-import { GetApiTokenSecurity } from "Risk-Cloud-API/dist/sdk/models/operations";
 
 async function run() {
-    const sdk = new RiskCloudAPI();
-    const operationSecurity: GetApiTokenSecurity = {
-        password: "<YOUR_PASSWORD_HERE>",
-        username: "<YOUR_USERNAME_HERE>",
-    };
+    const sdk = new RiskCloudAPI({
+        security: {
+            basic: {
+                password: "<YOUR_PASSWORD_HERE>",
+                username: "<YOUR_USERNAME_HERE>",
+            },
+        },
+    });
 
     let res;
     try {
-        res = await sdk.authentication.getApiToken({}, operationSecurity);
+        res = await sdk.authentication.getApiToken({});
     } catch (err) {
         if (err instanceof errors.SDKError) {
             console.error(err); // handle exception
@@ -163,18 +167,19 @@ You can override the default server globally by passing a server index to the `s
 
 ```typescript
 import { RiskCloudAPI } from "Risk-Cloud-API";
-import { GetApiTokenSecurity } from "Risk-Cloud-API/dist/sdk/models/operations";
 
 async function run() {
     const sdk = new RiskCloudAPI({
         serverIdx: 0,
+        security: {
+            basic: {
+                password: "<YOUR_PASSWORD_HERE>",
+                username: "<YOUR_USERNAME_HERE>",
+            },
+        },
     });
-    const operationSecurity: GetApiTokenSecurity = {
-        password: "<YOUR_PASSWORD_HERE>",
-        username: "<YOUR_USERNAME_HERE>",
-    };
 
-    const res = await sdk.authentication.getApiToken({}, operationSecurity);
+    const res = await sdk.authentication.getApiToken({});
 
     if (res.statusCode == 200) {
         // handle response
@@ -191,18 +196,19 @@ run();
 The default server can also be overridden globally by passing a URL to the `serverURL: str` optional parameter when initializing the SDK client instance. For example:
 ```typescript
 import { RiskCloudAPI } from "Risk-Cloud-API";
-import { GetApiTokenSecurity } from "Risk-Cloud-API/dist/sdk/models/operations";
 
 async function run() {
     const sdk = new RiskCloudAPI({
         serverURL: "http://localhost",
+        security: {
+            basic: {
+                password: "<YOUR_PASSWORD_HERE>",
+                username: "<YOUR_USERNAME_HERE>",
+            },
+        },
     });
-    const operationSecurity: GetApiTokenSecurity = {
-        password: "<YOUR_PASSWORD_HERE>",
-        username: "<YOUR_USERNAME_HERE>",
-    };
 
-    const res = await sdk.authentication.getApiToken({}, operationSecurity);
+    const res = await sdk.authentication.getApiToken({});
 
     if (res.statusCode == 200) {
         // handle response
@@ -250,7 +256,6 @@ This SDK supports the following security schemes globally:
 You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. The selected scheme will be used by default to authenticate with the API for all operations that support it. For example:
 ```typescript
 import { RiskCloudAPI } from "Risk-Cloud-API";
-import { Icon, TypeT } from "Risk-Cloud-API/dist/sdk/models/shared";
 
 async function run() {
     const sdk = new RiskCloudAPI({
@@ -262,39 +267,7 @@ async function run() {
         },
     });
 
-    const res = await sdk.application.create({
-        applicationApiCreateIn: {
-            color: "#00a3de",
-            icon: Icon.Cubes,
-            name: "Cyber Risk Management Application",
-            type: TypeT.ControlsCompliance,
-        },
-    });
-
-    if (res.statusCode == 200) {
-        // handle response
-    }
-}
-
-run();
-
-```
-
-### Per-Operation Security Schemes
-
-Some operations in this SDK require the security scheme to be specified at the request level. For example:
-```typescript
-import { RiskCloudAPI } from "Risk-Cloud-API";
-import { GetApiTokenSecurity } from "Risk-Cloud-API/dist/sdk/models/operations";
-
-async function run() {
-    const sdk = new RiskCloudAPI();
-    const operationSecurity: GetApiTokenSecurity = {
-        password: "<YOUR_PASSWORD_HERE>",
-        username: "<YOUR_USERNAME_HERE>",
-    };
-
-    const res = await sdk.authentication.getApiToken({}, operationSecurity);
+    const res = await sdk.authentication.getApiToken({});
 
     if (res.statusCode == 200) {
         // handle response
